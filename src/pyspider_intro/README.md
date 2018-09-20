@@ -1,5 +1,24 @@
 # PySpider简介
 
+`PySpider`的基本信息：
+
+* 是个Python的爬虫框架
+
+* 最大特点：
+    * 带图形界面WebUI的调试
+    * 简单易用
+    * 同时功能也很强大
+* GitHub
+    * https://github.com/binux/pyspider
+* 文档：
+    * 官方，英文：http://docs.pyspider.org/
+    * 非官方，中文：http://www.pyspider.cn/index.html
+* 作者
+    * 网名：`Binux`
+    * 别名：足叉兆虫
+    * 博客：[Binuxの杂货铺](https://binux.blog)
+    * Github: [binux (Roy Binux)](https://github.com/binux)
+
 ## `PySpider`对比`Scrapy`
 
 对于两个流行的Python的爬虫框架，PySpider和Scrapy，常常会被人拿来对比。

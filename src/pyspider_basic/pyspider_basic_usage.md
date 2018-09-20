@@ -79,7 +79,17 @@ PySpider对在调试期间所需要在上一个连接和下一个连接之间切
 
 ![点击Run重新运行上一级](../assets/img/run_redo_parent_level.png)
 
+然后就可以返回上一级了。
 
+然后也才注意到，每行的follow的左边开始显示的是：callback函数名
+
+此处的是`detail_page`
+
+![左边显示当前的级别的函数名](../assets/img/left_show_current_level_function.png)
+
+而对应的上一级的结果中，也是上一级的callback：
+
+![回到上一级显示上一级函数名](../assets/img/show_parent_level_function_name.png)
 
 ### 运行爬虫去爬取数据
 

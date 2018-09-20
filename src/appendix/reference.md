@@ -20,4 +20,3 @@
 * [【已解决】PySpider如何把json结果数据保存到csv或excel文件中 – 在路上](https://www.crifan.com/pyspider_save_json_result_data_to_csv_or_excel_file/)
 * [【已解决】PySpider中如何单个页面返回多个json数据结果 – 在路上](https://www.crifan.com/pyspider_single_html_page_return_mutiple_result_data/)
 * [【已解决】Mac或Win中用Excel打开UTF8编码的csv文件显示乱码](http://www.crifan.com/mac_win_use_excel_open_utf8_encoding_csv_file_show_messy_code)
-* 
