@@ -1,0 +1,19 @@
+{
+  "title": "Python爬虫框架：PySpider",
+  "description": "PySpider是一个Python的主流爬虫框架。下面就来总结PySpider的安装，基本的使用操作，常见的配置和参数的含义，常见的坑，等等。",
+  "pluginsConfig": {
+    "github-buttons": {
+      "buttons": [
+        {
+          "repo": "python_spider_pyspider"
+        }
+      ]
+    },
+    "sitemap-general": {
+      "prefix": "https://book.crifan.com/gitbook/python_spider_pyspider/website/"
+    },
+    "toolbar-button": {
+      "url": "http://book.crifan.com/books/python_spider_pyspider/pdf/python_spider_pyspider.pdf"
+    }
+  }
+}
