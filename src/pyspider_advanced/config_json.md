@@ -24,6 +24,6 @@ PySpider的配置文件一般叫做`config.json`
 
 然后去`-c`指定配置文件：
 
-```shell
+```bash
 pyspider -c config.json
 ```

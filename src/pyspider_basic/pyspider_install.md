@@ -8,7 +8,7 @@
 
 如果只是简单的直接安装的话，则可以去：
 
-```shell
+```bash
 pip install pyspider
 ```
 
@@ -34,7 +34,7 @@ pip install pyspider
 
 则解决办法是：
 
-```shell
+```bash
 pip uninstall pycurl
 export PYCURL_SSL_LIBRARY=openssl
 export LDFLAGS=-L/usr/local/opt/openssl/lib;export CPPFLAGS=-I/usr/local/opt/openssl/include;pip install pycurl --compile --no-cache-dir

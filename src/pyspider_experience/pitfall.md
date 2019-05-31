@@ -86,7 +86,7 @@ fullPicSeriesUrl= https://car.autohome.com.cn/pic/series-t/3170.html
 
 如果是Mac中，则用`lsof`
 
-```shell
+```bash
 ➜  AutocarData lsof -i:25555
 COMMAND     PID   USER   FD   TYPE             DEVICE SIZE/OFF NODE NAME
 phantomjs 46971 crifan   12u  IPv4 0xe4d24cdcaf5e481f      0t0  TCP *:25555 (LISTEN)
