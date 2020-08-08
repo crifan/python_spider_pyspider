@@ -1,6 +1,6 @@
 {
   "latestVersion": "v1.0",
-  "lastUpdate": "20190530",
+  "lastUpdate": "20200808",
   "gitRepoName": "python_spider_pyspider",
   "bookName": "Python爬虫框架：PySpider",
   "bookDescription": "PySpider是一个简单易用且强大的Python主流爬虫框架。此处总结PySpider的安装和基本的使用，以及一些高级用法，比如self.craw、config.json、data目录、phantomjs，和一些心得和常见的坑，且给出一些实际的例子供参考。"
