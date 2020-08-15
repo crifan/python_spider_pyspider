@@ -6,7 +6,27 @@
 
 ### 运行PySpider
 
-在某个目录下的终端命令行中输入`pyspider`即可启动运行。
+在某个目录下的终端命令行中输入
+
+```bash
+pyspider
+```
+
+即可启动运行，输出举例：
+
+```bash
+ pyspider
+phantomjs fetcher running on port 25555
+[I 200731 10:28:35 result_worker:49] result_worker starting...
+[I 200731 10:28:35 processor:211] processor starting...
+[I 200731 10:28:35 tornado_fetcher:638] fetcher starting...
+[I 200731 10:28:35 scheduler:647] scheduler starting...
+[I 200731 10:28:35 scheduler:782] scheduler.xmlrpc listening on 127.0.0.1:23333
+[I 200731 10:28:35 scheduler:586] in 5m: new:0,success:0,retry:0,failed:0
+[I 200731 10:28:35 app:84] webui exiting...
+```
+
+![pyspider_normal_run](../assets/img/pyspider_normal_run.png)
 
 注：
 
@@ -20,18 +40,22 @@
 
 http://0.0.0.0:5000/
 
-即可进入爬虫的管理界面了，此界面一般称为：`WebUI`
+即可进入爬虫的管理界面了，此界面一般称为`WebUI`
+
+![pyspider_dashboard_webui](../assets/img/pyspider_dashboard_webui.png)
 
 ### 新建爬虫项目
 
 点击`Create`，去新建一个爬虫项目
 
-输入:
+![pyspider_create_new_project](../assets/img/pyspider_create_new_project.png)
+
+输入：
 
 * 爬虫名称：
 * 入口地址：自动生成的代码中，会作为起始要抓取的url
   * 也可以不填
-  * 后续也可以去代码中修改的
+    * 后续可以在代码中修改
 
 然后再点击新建的爬虫项目，进入调试页面
 
@@ -125,65 +149,3 @@ PySpider对在调试期间所需要在上一个连接和下一个连接之间切
 > csv文件编码默认为UTF8（是好事，通用的），但是如果用（不论是Mac还是Win中的）excel去打开，结果（估计对于中文系统，都是）会默认以GKB（或GB18030）打开，所以会乱码
 > 
 > 解决办法：[【已解决】Mac或Win中用Excel打开UTF8编码的csv文件显示乱码](http://www.crifan.com/mac_win_use_excel_open_utf8_encoding_csv_file_show_messy_code)
-
-## PySpider中选择html中的元素和内容
-
-PySpider中的html的元素的选择，或者说`css选择器`，默认是用的`PyQuery`。
-
-确切的说是：PySpider针对html的响应`response`，默认提供了一个`doc`属性，其内置了`PyQuery`解析后结果，所以你可以用`response.doc("your_css_selector")`去选择你要的html中的内容了。
-
-而具体的your_css_selector的写法，则就变成`PyQuery`的写法了。
-
-举例：
-
-想要提取：
-
-```html
-<ul class="rank-list-ul" 0="">
-  <li id="s3170">
-...
-    <div>
-      ...
-      <a id="atk_3170" href="//car.autohome.com.cn/pic/series/3170.html#pvareaid=103448">图库</a>
-    ...
-    </div>
-  </li>
-...
-</ul>
-```
-
-中的href的值，则：
-
-PyQuery的写法是：`.rank-list-ul li div a[href*="/pic/series"]`
-
-PySpider的代码是：
-
-```python
-  for each in response.doc('.rank-list-ul li div a[href*="/pic/series"]').items():
-```
-
-详见： [【已解决】pyspider中如何写规则去提取网页内容 – 在路上](https://www.crifan.com/pyspider_how_write_rule_to_extract_html_webpage_content/)
-
-### PyQuery
-
-`response.doc`返回后的`PyQuery对象`，之后可以继续用PyQuery去操作
-
-此处列出PyQuery的一些典型的操作函数：
-
-* `PyQuery.filter(selector)`
-* `PyQuery.find(selector)`
-* `PyQuery.items(selector=None)`
-* `PyQuery.siblings(selector=None)`
-
-另外，常见的一些属性来说：
-
-* `PyQuery.text(value=<NoDefault>)`：当前节点的text文本值
-* `PyQuery.html(value=<NoDefault>, **kwargs)`：当前节点的html值
-
-另外：
-
-* 关于css操作可以参考：[CSS — pyquery 1.2.4 documentation](https://pythonhosted.org/pyquery/css.html)
-
-关于PyQuery，详见另外教程：
-
-【整理Book】Python心得：PyQuery

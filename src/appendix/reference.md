@@ -1,5 +1,10 @@
 # 参考资料
 
+* 【已解决】Mac中给Python3安装PySpider
+* 【已解决】Mac中安装phantomjs
+* 【已解决】Mac中pip安装pycurl报错：fatal error openssl/ssl.h file not found
+* 
+* [HTML解析库Python版jQuery：PyQuery](http://book.crifan.com/books/python_html_parse_pyquery/website)
 * [pyspider是开源强大的python爬虫系统 - pyspider中文网](http://www.pyspider.cn/index.html)
 * [【已解决】PySpider中保存数据到mysql](http://www.crifan.com/pyspider_save_data_to_mysql)
 * [【已解决】PySpider中如何清空之前运行的数据和正在运行的任务 – 在路上](https://www.crifan.com/pyspider_how_clear_previous_running_task_and_data/)
@@ -20,3 +25,5 @@
 * [【已解决】PySpider如何把json结果数据保存到csv或excel文件中 – 在路上](https://www.crifan.com/pyspider_save_json_result_data_to_csv_or_excel_file/)
 * [【已解决】PySpider中如何单个页面返回多个json数据结果 – 在路上](https://www.crifan.com/pyspider_single_html_page_return_mutiple_result_data/)
 * [【已解决】Mac或Win中用Excel打开UTF8编码的csv文件显示乱码](http://www.crifan.com/mac_win_use_excel_open_utf8_encoding_csv_file_show_messy_code)
+* [安装pyspider遇到的坑（python3.6）_盛夏88688的博客-CSDN博客_python 3.6 with报错use async with instead](https://blog.csdn.net/u011451186/article/details/88222328)
+* 
