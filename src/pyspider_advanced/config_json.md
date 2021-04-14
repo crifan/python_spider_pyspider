@@ -27,3 +27,41 @@ PySpider的配置文件一般叫做`config.json`
 ```bash
 pyspider -c config.json
 ```
+
+## 举例
+
+一个配置更简单的`config.json`
+
+```json
+{
+    "webui": {
+        "port": 5000,
+        "need-auth": false
+    },
+    "scheduler": {
+        "delete_time": 30
+    }
+}
+```
+
+运行调用效果：
+
+```bash
+ pyspider -c use_python_spider_framework/config.json 
+[I 200731 14:48:06 result_worker:49] result_worker starting...
+phantomjs fetcher running on port 25555
+[I 200731 14:48:06 processor:211] processor starting...
+[I 200731 14:48:06 scheduler:647] scheduler starting...
+[I 200731 14:48:06 tornado_fetcher:638] fetcher starting...
+[I 200731 14:48:06 scheduler:782] scheduler.xmlrpc listening on 127.0.0.1:23333
+[I 200731 14:48:06 scheduler:126] project crawlBaiduHotList_PySpider_0731_1436 updated, status:DEBUG, paused:False, 0 tasks
+[I 200731 14:48:06 scheduler:965] select crawlBaiduHotList_PySpider_0731_1436:_on_get_info data:,_on_get_info
+[I 200731 14:48:06 scheduler:586] in 5m: new:0,success:0,retry:0,failed:0
+[I 200731 14:48:06 tornado_fetcher:188] [200] crawlBaiduHotList_PySpider_0731_1436:_on_get_info data:,_on_get_info 0s
+[D 200731 14:48:06 project_module:145] project: crawlBaiduHotList_PySpider_0731_1436 updated.
+[I 200731 14:48:06 processor:202] process crawlBaiduHotList_PySpider_0731_1436:_on_get_info data:,_on_get_info -> [200] len:12 -> result:None fol:0 msg:0 err:None
+[I 200731 14:48:06 scheduler:360] crawlBaiduHotList_PySpider_0731_1436 on_get_info {'min_tick': 0, 'retry_delay': {}, 'crawl_config': {}}
+[I 200731 14:48:06 app:76] webui running on 0.0.0.0:5000
+```
+
+![pyspider_config_data_path](../assets/img/pyspider_config_data_path.png)

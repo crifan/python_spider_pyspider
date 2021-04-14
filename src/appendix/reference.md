@@ -1,9 +1,21 @@
 # 参考资料
 
-* 【已解决】Mac中给Python3安装PySpider
+* 【未解决】用Python爬取汽车之家的车型车系详细数据
+* 【已解决】用Python爬虫框架PySpider实现爬虫爬取百度热榜内容列表
+* 【已解决】PySpider中如何在单个页面返回多个结果保存到自带的Results页面中的列表中
+* 【已解决】PySpider抓包百度热榜标题列表结果
 * 【已解决】Mac中安装phantomjs
+* 【已解决】Mac中启动PySpider
 * 【已解决】Mac中pip安装pycurl报错：fatal error openssl/ssl.h file not found
+* 【已解决】Mac中给Python3安装PySpider
+* 【已解决】CentOS7中安装全局的PySpider并配置和运行
+* 【已解决】CentOS中全局的PySpider中如何指定data目录位置
+* 【未解决】PySpider运行批量下载时报错：HTTP 599 Operation timed out after milliseconds with out of bytes received
+* 【已解决】PySpider无法继续爬取剩余绘本数据
+* 【已解决】PySpider中如何更改默认5000端口
 * 
+* [【已解决】写Python爬虫爬取汽车之家品牌车系车型数据 – 在路上](https://www.crifan.com/use_pyspider_to_crawl_autohome_car_brand_serial_model_data/)
+* [【无法解决】PySpider的部署运行而非调试界面上RUN运行](http://www.crifan.com/pyspider_deploy_run_non_debug_ui_run)
 * [HTML解析库Python版jQuery：PyQuery](http://book.crifan.com/books/python_html_parse_pyquery/website)
 * [pyspider是开源强大的python爬虫系统 - pyspider中文网](http://www.pyspider.cn/index.html)
 * [【已解决】PySpider中保存数据到mysql](http://www.crifan.com/pyspider_save_data_to_mysql)
@@ -25,5 +37,12 @@
 * [【已解决】PySpider如何把json结果数据保存到csv或excel文件中 – 在路上](https://www.crifan.com/pyspider_save_json_result_data_to_csv_or_excel_file/)
 * [【已解决】PySpider中如何单个页面返回多个json数据结果 – 在路上](https://www.crifan.com/pyspider_single_html_page_return_mutiple_result_data/)
 * [【已解决】Mac或Win中用Excel打开UTF8编码的csv文件显示乱码](http://www.crifan.com/mac_win_use_excel_open_utf8_encoding_csv_file_show_messy_code)
+* [【已解决】pyspider中如何加载汽车之家页面中的更多内容 – 在路上](https://www.crifan.com/pyspider_how_load_more_content_data_from_current_page/)
+* [【已解决】PySpider中如何发送POST请求且传递格式为application/x-www-form-urlencoded的form data参数 – 在路上](https://www.crifan.com/pyspider_how_send_post_request_format_application_x_www_form_urlencoded_form_data_parameter/)
+* [【已解决】PySpider中如何强制让重复的url地址继续爬取 – 在路上](https://www.crifan.com/pyspider_how_force_duplicate_url_re_crawl/)
+* 
 * [安装pyspider遇到的坑（python3.6）_盛夏88688的博客-CSDN博客_python 3.6 with报错use async with instead](https://blog.csdn.net/u011451186/article/details/88222328)
+* [How to delete a spider and the data? · Issue #380 · binux/pyspider](https://github.com/binux/pyspider/issues/380)
+* [Frequently Asked Questions - pyspider](http://docs.pyspider.org/en/latest/Frequently-Asked-Questions/)
+* [python爬虫 - crawl 连接网页超时，HTTP 599 - SegmentFault 思否](https://segmentfault.com/q/1010000005839907)
 * 

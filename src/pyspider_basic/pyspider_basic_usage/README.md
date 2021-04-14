@@ -26,12 +26,16 @@ phantomjs fetcher running on port 25555
 [I 200731 10:28:35 app:84] webui exiting...
 ```
 
-![pyspider_normal_run](../assets/img/pyspider_normal_run.png)
+![pyspider_normal_run](../../assets/img/pyspider_normal_run.png)
 
 注：
 
-* 如果是用虚拟环境安装的PySpider，记得先进去虚拟环境后再运行PySpider
-  * 比如用的`pipenv`，则是先`pipenv shell`，再`pyspider`
+* 如果是用虚拟环境安装的PySpider，记得先进入虚拟环境后再运行PySpider
+  * 比如用的`pipenv`，则是
+  ```
+  pipenv shell
+  pyspider
+  ```
 * `pyspider`等价于`pyspider all`
 
 ### 进入`WebUI`
@@ -40,15 +44,15 @@ phantomjs fetcher running on port 25555
 
 http://0.0.0.0:5000/
 
-即可进入爬虫的管理界面了，此界面一般称为`WebUI`
+即可进入爬虫的`管理界面`=`WebUI`
 
-![pyspider_dashboard_webui](../assets/img/pyspider_dashboard_webui.png)
+![pyspider_dashboard_webui](../../assets/img/pyspider_dashboard_webui.png)
 
 ### 新建爬虫项目
 
 点击`Create`，去新建一个爬虫项目
 
-![pyspider_create_new_project](../assets/img/pyspider_create_new_project.png)
+![pyspider_create_new_project](../../assets/img/pyspider_create_new_project.png)
 
 输入：
 
@@ -77,11 +81,11 @@ http://0.0.0.0:5000/
 
 之前调试运行时，不知道还有回到上一级，在想要返回上一级时，都直接是点击左上角的项目名字
 
-![点击PySpider的项目名返回](../assets/img/click_pyspider_project_name_return.png)
+![点击PySpider的项目名返回](../../assets/img/click_pyspider_project_name_return.png)
 
 返回项目列表：
 
-![返回PySPider的项目列表]](../assets/img/return_pyspider_project_list.png)
+![返回PySPider的项目列表]](../../assets/img/return_pyspider_project_list.png)
 
 然后重新进去，重新点击Run，直到跑到对应的层级，去继续调试。
 
@@ -93,15 +97,15 @@ PySpider对在调试期间所需要在上一个连接和下一个连接之间切
 
 实际效果演示：
 
-![点击上一级或下一级即可切换](../assets/img/click_prev_next_to_switch.png)
+![点击上一级或下一级即可切换](../../assets/img/click_prev_next_to_switch.png)
 
 想要返回上一级的爬取函数的话，点击 左箭头
 
-![点击左箭头返回上一级](../assets/img/click_left_arrow_return_upper_level.png)
+![点击左箭头返回上一级](../../assets/img/click_left_arrow_return_upper_level.png)
 
 然后再点击Run：
 
-![点击Run重新运行上一级](../assets/img/run_redo_parent_level.png)
+![点击Run重新运行上一级](../../assets/img/run_redo_parent_level.png)
 
 然后就可以返回上一级了。
 
@@ -109,11 +113,11 @@ PySpider对在调试期间所需要在上一个连接和下一个连接之间切
 
 此处的是`detail_page`
 
-![左边显示当前的级别的函数名](../assets/img/left_show_current_level_function.png)
+![左边显示当前的级别的函数名](../../assets/img/left_show_current_level_function.png)
 
 而对应的上一级的结果中，也是上一级的callback：
 
-![回到上一级显示上一级函数名](../assets/img/show_parent_level_function_name.png)
+![回到上一级显示上一级函数名](../../assets/img/show_parent_level_function_name.png)
 
 ### 运行爬虫去爬取数据
 

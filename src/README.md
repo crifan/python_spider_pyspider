@@ -1,11 +1,11 @@
 # Python爬虫框架：PySpider
 
-* 最新版本：`v1.2`
-* 更新时间：`20200815`
+* 最新版本：`v1.4`
+* 更新时间：`20210414`
 
 ## 简介
 
-PySpider是一个简单易用且强大的Python主流爬虫框架。此处总结PySpider的安装和基本的使用，以及安装和启动时常见问题，并且给出查找定位元素的PyQuery的基本用法举例，以及一些高级用法，比如self.craw、config.json、data目录、phantomjs，和一些心得和常见的坑，且给出一些实际的例子供参考。
+PySpider是一个简单易用且强大的Python主流爬虫框架。此处总结PySpider的安装和基本的使用，以及安装和启动时常见问题，并且给出查找定位元素的PyQuery的基本用法举例，以及一些高级用法，比如self.craw、config.json、data目录、phantomjs，和一些心得和常见的坑，并且给出一些实际的例子供参考。
 
 ## 源码+浏览+下载
 
@@ -37,3 +37,9 @@ PySpider是一个简单易用且强大的Python主流爬虫框架。此处总结
 ## 鸣谢
 
 感谢我的老婆**陈雪**的包容理解和悉心照料，才使得我`crifan`有更多精力去专注技术专研和整理归纳出这些电子书和技术教程，特此鸣谢。
+
+## 更多其他电子书
+
+本人`crifan`还写了其他`100+`本电子书教程，感兴趣可移步至：
+
+[crifan/crifan_ebook_readme: Crifan的电子书的使用说明](https://github.com/crifan/crifan_ebook_readme)
