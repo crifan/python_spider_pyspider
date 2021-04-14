@@ -134,3 +134,34 @@ self.crawl(curUrlWithHash,
     itag=fakeItagForceRecrawl, # To force re-crawl for next page
     method="POST",
 ```
+
+## 当连续多个请求都出现599超时连接后，且尝试retry也都全部失败后，会自动暂停
+
+之前遇到过多次，类似这种：
+
+![pyspider_many_599_paused](../../assets/img/pyspider_many_599_paused.png)
+
+```bash
+[I 180922 11:25:42 scheduler:959] task retry 0/3 ChildQupeiyinApp:c3e0a65a42199256898652ce1e737321 https://childapi.qupeiyin.com/show/detail?show_id=129410670
+[E 180922 11:25:42 tornado_fetcher:212] [599] ChildQupeiyinApp:80040ee81a217bc05a877ff41ee74d05 https://childapi.qupeiyin.com/show/detail?show_id=130095443, HTTP 599: Connection timed out after 20000 milliseconds 20.00s
+[E 180922 11:25:42 processor:202] process ChildQupeiyinApp:80040ee81a217bc05a877ff41ee74d05 https://childapi.qupeiyin.com/show/detail?show_id=130095443 -> [599] len:0 -> result:None fol:0 msg:0 err:Exception('HTTP 599: Connection timed out after 20000 milliseconds',)
+[I 180922 11:25:42 scheduler:959] task retry 0/3 ChildQupeiyinApp:80040ee81a217bc05a877ff41ee74d05 https://childapi.qupeiyin.com/show/detail?show_id=130095443
+[E 180922 11:25:42 tornado_fetcher:212] [599] ChildQupeiyinApp:3783982a707a6c82b8c30d619a6933d7 https://childapi.qupeiyin.com/show/detail?show_id=130096232, HTTP 599: Connection timed out after 20000 milliseconds 20.00s
+[E 180922 11:25:42 processor:202] process ChildQupeiyinApp:3783982a707a6c82b8c30d619a6933d7 https://childapi.qupeiyin.com/show/detail?show_id=130096232 -> [599] len:0 -> result:None fol:0 msg:0 err:Exception('HTTP 599: Connection timed out after 20000 milliseconds',)
+[I 180922 11:25:43 scheduler:959] task retry 0/3 ChildQupeiyinApp:3783982a707a6c82b8c30d619a6933d7 https://childapi.qupeiyin.com/show/detail?show_id=130096232
+[I 180922 11:26:08 scheduler:126] project ChildQupeiyinApp updated, status:STOP, paused:True, 1667087 tasks
+^C[I 180922 11:26:13 scheduler:663] scheduler exiting...
+[I 180922 11:26:13 tornado_fetcher:671] fetcher exiting...
+[I 180922 11:26:13 processor:229] processor exiting...
+[I 180922 11:26:13 result_worker:66] result_worker exiting...
+```
+
+上述 `status:STOP, paused:True` 就是表示**暂停**了。
+
+对应着界面上`status`自动变成`PAUSED`
+
+![pyspider_webui_paused](../../assets/img/pyspider_webui_paused.png)
+
+-> 估计是内部逻辑发现多次是`599`的错误，就自动暂停重试了。避免了后续无效的请求
+
+-> 还是很智能的，因为此处实际上是网络断了，导致无法请求的。

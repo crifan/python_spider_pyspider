@@ -3,5 +3,5 @@
   "lastUpdate": "20210414",
   "gitRepoName": "python_spider_pyspider",
   "bookName": "Python爬虫框架：PySpider",
-  "bookDescription": "PySpider是一个简单易用且强大的Python主流爬虫框架。此处总结PySpider的安装和基本的使用，以及安装和启动时常见问题，并且给出查找定位元素的PyQuery的基本用法举例，以及一些高级用法，比如self.craw、config.json、data目录、phantomjs，和一些心得和常见的坑，并且给出一些实际的例子供参考。"
+  "bookDescription": "PySpider是一个简单易用且强大的Python主流爬虫框架。此处总结PySpider的安装和基本的使用，以及安装和启动时常见问题，并且给出查找定位元素的PyQuery的基本用法举例，以及详细描述了项目中从新建到调试的每一步的细节如何操作，以及一些高级用法，比如self.craw、config.json、data目录、phantomjs，和一些心得，比如删除项目，以及常见的坑，并且给出一些实际的例子供参考，包括汽车之家的品牌车型车系数据、汽车之家的车型详细数据、百度首页热榜列表等。"
 }

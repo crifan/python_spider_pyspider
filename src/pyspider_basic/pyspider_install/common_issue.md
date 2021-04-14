@@ -149,6 +149,25 @@ export PYCURL_SSL_LIBRARY=openssl
 export LDFLAGS=-L/usr/local/opt/openssl/lib;export CPPFLAGS=-I/usr/local/opt/openssl/include;pip install pycurl --compile --no-cache-dir
 ```
 
+附上，进入虚拟环境后再操作的例子：
+
+```bash
+➜  ChildQuPeiYinApp_downloadDemo pipenv shell
+Launching subshell in virtual environment…
+ . /Users/crifan/.local/share/virtualenvs/ChildQuPeiYinApp_downloadDemo-IRhFV7xw/bin/activate
+➜  ChildQuPeiYinApp_downloadDemo  . /Users/crifan/.local/share/virtualenvs/ChildQuPeiYinApp_downloadDemo-IRhFV7xw/bin/activate
+➜  ChildQuPeiYinApp_downloadDemo pip uninstall pycurl
+Skipping pycurl as it is not installed.
+➜  ChildQuPeiYinApp_downloadDemo export PYCURL_SSL_LIBRARY=openssl
+➜  ChildQuPeiYinApp_downloadDemo export LDFLAGS=-L/usr/local/opt/openssl/lib;export CPPFLAGS=-I/usr/local/opt/openssl/include;pip install pycurl --compile --no-cache-dir
+Collecting pycurl
+  Downloading https://files.pythonhosted.org/packages/e8/e4/0dbb8735407189f00b33d84122b9be52c790c7c3b25286826f4e1bdb7bde/pycurl-7.43.0.2.tar.gz (214kB)
+    100% |████████████████████████████████| 215kB 198kB/s
+Installing collected packages: pycurl
+  Running setup.py install for pycurl ... done
+Successfully installed pycurl-7.43.0.2
+```
+
 注意：上述的：
 
 * `/usr/local/opt/openssl`是你的openssl安装路径

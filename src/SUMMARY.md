@@ -6,6 +6,7 @@
   * [PySpider安装](pyspider_basic/pyspider_install/README.md)
     * [安装和启动的常见问题](pyspider_basic/pyspider_install/common_issue.md)
   * [PySpider基本用法](pyspider_basic/pyspider_basic_usage/README.md)
+    * [项目操作举例](pyspider_basic/pyspider_basic_usage/project_steps.md)
     * [查找提取元素](pyspider_basic/pyspider_basic_usage/find_extract_html.md)
 * [PySpider的高级用法](pyspider_advanced/README.md)
   * [self.crawl](pyspider_advanced/self_crawl.md)
