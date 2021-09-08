@@ -253,8 +253,6 @@ for eachProvince in provinceList:
     requests.exceptions.HTTPError: HTTP 400: Bad Request
 ```
 
-![pyspider_http_400_bad_request]
-
 之前还遇到过一个类似的例子：
 
 ```python

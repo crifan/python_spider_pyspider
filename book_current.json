@@ -10,10 +10,10 @@
       ]
     },
     "sitemap-general": {
-      "prefix": "https://book.crifan.com/gitbook/python_spider_pyspider/website/"
+      "prefix": "https://book.crifan.com/books/python_spider_pyspider/website/"
     },
     "toolbar-button": {
-      "url": "http://book.crifan.com/books/python_spider_pyspider/pdf/python_spider_pyspider.pdf"
+      "url": "https://book.crifan.com/books/python_spider_pyspider/pdf/python_spider_pyspider.pdf"
     }
   }
 }

@@ -1,7 +1,7 @@
 # Python爬虫框架：PySpider
 
-* 最新版本：`v1.4`
-* 更新时间：`20210414`
+* 最新版本：`v2.0`
+* 更新时间：`20210908`
 
 ## 简介
 
@@ -21,14 +21,14 @@ PySpider是一个简单易用且强大的Python主流爬虫框架。此处总结
 
 ### 在线浏览
 
-* [Python爬虫框架：PySpider book.crifan.com](http://book.crifan.com/books/python_spider_pyspider/website)
+* [Python爬虫框架：PySpider book.crifan.com](https://book.crifan.com/books/python_spider_pyspider/website)
 * [Python爬虫框架：PySpider crifan.github.io](https://crifan.github.io/python_spider_pyspider/website)
 
 ### 离线下载阅读
 
-* [Python爬虫框架：PySpider PDF](http://book.crifan.com/books/python_spider_pyspider/pdf/python_spider_pyspider.pdf)
-* [Python爬虫框架：PySpider ePub](http://book.crifan.com/books/python_spider_pyspider/epub/python_spider_pyspider.epub)
-* [Python爬虫框架：PySpider Mobi](http://book.crifan.com/books/python_spider_pyspider/mobi/python_spider_pyspider.mobi)
+* [Python爬虫框架：PySpider PDF](https://book.crifan.com/books/python_spider_pyspider/pdf/python_spider_pyspider.pdf)
+* [Python爬虫框架：PySpider ePub](https://book.crifan.com/books/python_spider_pyspider/epub/python_spider_pyspider.epub)
+* [Python爬虫框架：PySpider Mobi](https://book.crifan.com/books/python_spider_pyspider/mobi/python_spider_pyspider.mobi)
 
 ## 版权说明
 

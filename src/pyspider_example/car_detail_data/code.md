@@ -1,10 +1,8 @@
-# 汽车之家的车型详细数据
+# PySpider代码
 
-## 代码
+## 核心文件：`autohome_20200902.py`
 
-### `autohome_20200902.py`
-
-* 直接下载：[autohome_20200902.py](http://book.crifan.com/books/python_spider_pyspider/website/assets/file/autohome_20200902.py)
+* 直接下载：[autohome_20200902.py](../../assets/file/autohome_20200902.py)
 * 贴出如下
 
 ```python
@@ -2468,12 +2466,3 @@ class Handler(BaseHandler):
         print("on_message: msg=%s" % msg)
         return msg
 ```
-
-## 输出结果
-
-### `autohome_20200901_car44451.xlsx`
-
-* 在线下载：[autohome_20200901_car44451.xlsx](http://book.crifan.com/books/python_spider_pyspider/website/assets/file/autohome_20200901_car44451.xlsx)
-* 截图效果
-  * ![autohome_excel_screenshot_1](../assets/img/autohome_excel_screenshot_1.jpg)
-  * ![autohome_excel_screenshot_2](../assets/img/autohome_excel_screenshot_2.jpg)

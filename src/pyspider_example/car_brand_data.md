@@ -1,6 +1,82 @@
 # 汽车之家的品牌等数据
 
-## 文件：`autohomeBrandData.py`
+## 需求
+
+想要抓取
+
+汽车之家
+
+https://www.autohome.com.cn/car/
+
+![autohome_car_homepage](../assets/img/autohome_car_homepage.png)
+
+的所有的品牌的车系和车型数据
+
+## 核心过程
+
+虽然前面汽车之家的主页是
+
+https://www.autohome.com.cn/car/
+
+但是对于：方便爬虫去找所有品牌的入口
+
+经过研究是：
+
+```python
+self.crawl("https://www.autohome.com.cn/grade/carhtml/%s.html" % eachLetter, callback=self.gradCarHtmlPage)
+```
+
+其中：`%s`支持从`a`到`z`
+
+比如对于`a`是：
+
+https://www.autohome.com.cn/grade/carhtml/a.html
+
+![autohome_page_brand_a](../assets/img/autohome_page_brand_a.png)
+
+其中，我们要去抓取的是某个品牌的某个系列，比如：[奥迪A4L](https://www.autohome.com.cn/692/#levelsource=000000000_0&pvareaid=101594)的`图库`：
+
+https://car.autohome.com.cn/pic/series/692.html#pvareaid=103448
+
+然后再去`picSeriesPage`中：
+
+```python
+        fnRightPicSeries = response.doc('.search-pic-tbar .fn-right a[href*="/pic/series"]')
+```
+
+找到：`search-pic-tbar`下面的`href*="/pic/series"`：
+
+![autohome_page_search_pic_tbar](../assets/img/autohome_page_search_pic_tbar.png)
+
+然后，单独再去找到车型详情页`spec`页面，比如
+
+`modelSpecUrlTemplate = "https://www.autohome.com.cn/spec/%s/#pvareaid=2042128"`
+
+对应的地址，比如：
+
+https://www.autohome.com.cn/spec/32708/#pvareaid=2042128
+
+对应页面：
+
+![autohome_page_car_detail](../assets/img/autohome_page_car_detail.png)
+
+其顶部，有很多相关的字段，比如：`品牌`（=车厂=厂商）、`子品牌`、`厂商指导价`等等
+
+以及页面下面有，全系（不同配置的）车型的数据：
+
+![autohome_page_car_series](../assets/img/autohome_page_car_series.png)
+
+然后用`carModelSpecPage`，再去解析不同字段
+
+最终即可获取到，所有从车品牌的所有车系的所有车型的基本信息了。
+
+详见：
+
+* [【已解决】写Python爬虫爬取汽车之家品牌车系车型数据 – 在路上](https://www.crifan.com/use_pyspider_to_crawl_autohome_car_brand_serial_model_data/)
+
+## PySpider
+
+### 核心文件：`autohomeBrandData.py`
 
 ```python
 #!/usr/bin/env python
@@ -239,7 +315,7 @@ class Handler(BaseHandler):
         return curSerieDict
 ```
 
-## 文件：`AutohomeResultWorker.py`
+### worker文件：`AutohomeResultWorker.py`
 
 ```python
 #!/usr/bin/env python
@@ -503,3 +579,45 @@ if __name__ == '__main__':
   }
 }
 ```
+
+## 相关内容
+
+### 相关页面
+
+汽车之家的入口页面：
+
+![autohome_car_debug_page](../assets/img/autohome_car_debug_page.png)
+
+对应的PySpider调试页面
+
+![autohome_car_pyspider_debug](../assets/img/autohome_car_pyspider_debug.png)
+
+#### 调试PySpider
+
+期间会涉及到PySpider的调试
+
+比如：
+
+用了debug模式去调试：
+
+![autohome_pyspider_debug_webui](../assets/img/autohome_pyspider_debug_webui.png)
+
+遇到一个出错的：
+
+![autohome_pyspider_process_error](../assets/img/autohome_pyspider_process_error.png)
+
+点击进去可以看到（出错的子任务的）详情信息：
+
+![autohome_pyspider_error_detail_1](../assets/img/autohome_pyspider_error_detail_1.png)
+
+此处明显是：
+
+`Document is empty`
+
+![autohome_pyspider_error_doc_empty](../assets/img/autohome_pyspider_error_doc_empty.png)
+
+#### 导出结果
+
+PySpider运行完毕（或运行期间）可以去results页面去导出结果：
+
+![autohome_pyspider_export_result_csv](../assets/img/autohome_pyspider_export_result_csv.png)
